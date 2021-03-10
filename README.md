@@ -11,7 +11,7 @@ The dataset is mimic -II database  available at https://physionet.org/content/mi
 Group Members :
 * Harsh Mahajan: IIB2019001
 * Aditya Raj Shukla: IIB2019007
-* Bala Chetan Rao: IIB2019018
+* B Chetan Rao: IIB2019018
 * Hitika Rajesh Kumar: IIB2019021
 
 ## Setup
