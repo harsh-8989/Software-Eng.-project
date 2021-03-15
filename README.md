@@ -16,3 +16,4 @@ Group Members :
 
 ## Setup
 //
+NOTE:- For viewing ML codes and visualisations,if the code doesn't opens here,just copy the url and paste it on nbviewer.jupyter.org , it will open 
