@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Tminus0</title>
+	<link rel="stylesheet" href="{% static 'css/style_about.css' %}">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+</head>
+<body>
+	<ul>
+		<li><img src="{% static 'logo(t-0).png' %}" alt="logo" width="auto" height="35" /></li>
+		<li style="float:right"><a href="/home">HOME</a></li>
+		<li style="float:right"><a href="/about">ABOUT</a></li>
+	</ul>
+	<h1>About</h1>
+
+	<h4>T Minus 0</h4>
+
+	<img src="{% static 'line.svg' %}" width="170" height="auto">
+
+	<div class="section">
+		<div class="left">
+			<p>
+				A software for  Massive E-Health services using Real time data for IoMT(Internet of medical things) Enabled Healthcare Systems.
+			</p>
+		</div>
+			<div class="right">
+				<p>
+					With the increasing popularity of the Internet-of-Medical-Things (IoMT) and smart devices, 
+					huge volumes of real time or IoT data have been generated. This software aims to address the 
+					concept drift(change in data), which is a major challenge in the processing of voluminous data streams.
+					Concept drift refers to overtime change in data distribution. It may occur in the medical 
+					domain, for example the medical sensors measuring for general healthcare or rehabilitation, which may switch their roles for ICU emergency operations when required. Detecting drifts among the real time medical data becomes trickier when the class distributions in data are skewed, which is often true for medical sensors e-health data. 
+				</p>
+		</div>
+	</div>
+</body>
+</html>
