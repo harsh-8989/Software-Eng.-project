@@ -1,8 +1,9 @@
 from django.shortcuts import render,HttpResponse
 from backend.models import developer
 from backend.models import doctor
-from django.contrib import messages
+from django.contrib import messages as message
 from datetime import datetime
+from django.contrib.messages import constants
 from django.contrib.auth import authenticate
 from django.contrib.auth.models import User
 from django.contrib.auth.hashers import make_password,check_password
@@ -25,21 +26,22 @@ def developer_login(request):
         if auth is not None:
             return render(request,'developer.html')
         else:
+            message.add_message(request, messages.INFO, 'Incorrect password/username !!!')
             return render(request,'login.html')
-            
-            
     else :
         return HttpResponse("404 - not found")
 
 def doctor_login(request):
+    
     if request.method == 'POST':
         user=request.POST['username']
         psw=request.POST['password']
         auth=doctor.objects.get(user_name=user)        
+        print(auth)
         if auth is not None and check_password(psw,auth.password):
             return render(request,'doc_page.html')
         else :
-
+            message.add_message(request, messages.INFO, 'Incorrect password/username !!!')
             return render(request,'login.html')
     else :
         return HttpResponse("404 - not found")
