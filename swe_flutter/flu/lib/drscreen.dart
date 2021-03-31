@@ -76,7 +76,7 @@ class DrScreen extends StatelessWidget {
                           hoverColor: Colors.blueGrey,
                           child: Padding(
                             padding: const EdgeInsets.all(16.0),
-                            child: Text('MODIFY SOFTWARE', style: TextStyle(
+                            child: Text('TREATMENT OF PATIENT', style: TextStyle(
                               color: Colors.black,
                               fontSize: 30,
                               // backgroundColor: Colors.black,
