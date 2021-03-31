@@ -102,12 +102,7 @@ class _LoginPageState extends State<LoginPage> {
                           decoration: InputDecoration(
                             labelText: 'Password',
                             prefixIcon: const Icon(Icons.security),
-                            suffixIcon: IconButton(
-                              icon: Icon(
-                                Icons.remove_red_eye,
-                                color: Colors.grey,
-                              ),
-                            ),
+                            
                           ),
                           onChanged: (String value){
                             password=value;
@@ -246,13 +241,7 @@ class _LoginPageState extends State<LoginPage> {
                           decoration: InputDecoration(
                             labelText: 'Password',
                             prefixIcon: const Icon(Icons.security),
-                            suffixIcon: IconButton(
-                              icon: Icon(
-                                Icons.remove_red_eye,
-                                color: Colors.grey,
-                              ),
 
-                            ),
                           ),
                           onChanged: (String value){
                             password=value;
