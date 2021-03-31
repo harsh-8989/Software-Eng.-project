@@ -8,6 +8,23 @@ class AdminScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.black87,
+          title: Center(
+            child:
+            Center(
+              child: Text(
+                  "WELCOME ",
+                  style: TextStyle(
+                    color: Colors.white30,
+                    fontWeight: FontWeight.w900,
+
+                  )
+              ),
+            ),
+
+          ),
+        ),
         body: SafeArea(
           child: Stack(
             children: [
