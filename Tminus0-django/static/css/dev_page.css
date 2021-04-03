@@ -63,3 +63,8 @@ h1 {
   color: white;
   border: none;
 }
+
+a{
+  color: white;
+  text-decoration: solid;
+}
