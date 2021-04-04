@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-{% load static %}
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Doctor Signup</title>
-    <link rel="stylesheet" href="{% static '/css/doc_signup.css' %}">
+    <link rel="stylesheet" href="doc_register.css">
 </head>
 
 <body>
-    <h1>Doctor's Detail</h1>
-    <form method="POST" action="/doctor_signup"> {% csrf_token %}
-        <div class="col">
+    <h1>Doctor's Details</h1>
+    <form method="POST" action="/doctor_signup">
+        <div class="col col1">
             <div class="minput">
                 <input type="text" name="fname" dir="auto" required>
                 <span class="bar"></span>
@@ -37,12 +36,12 @@
             <div class="minput">
                 <input type="text" name="position" dir="auto" required>
                 <span class="bar"></span>
-                <label>position</label>
+                <label>Position</label>
             </div>
                 </div>
             </div>
         </div>
-        <div class="col">
+        <div class="col col2">
             <div class="minput">
                 <input type="text" name="pseudo" dir="auto" required>
 
@@ -59,7 +58,7 @@
             <div class="minput">
                 <input type="password" name="password" dir="auto" required>
                 <span class="bar"></span>
-                <label>Passwrod</label>
+                <label>Password</label>
             </div>
 
             <div class="minput">
@@ -70,7 +69,7 @@
             <div class="control-group">    
                 </label>
             </div>
-
+        </br>
             <div class="minput">
             
                 
@@ -78,6 +77,7 @@
             </div>
         </div>
     </form>
+    
 </body>
 
 </html>
