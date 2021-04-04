@@ -1,7 +1,9 @@
-body {font-family: 'Montserrat';font-size: 16px;}
-body, html {
-  height: 100%;
+body {font-family: 'Montserrat';font-size: 16px; margin: 0; }
+body,html {
+  height: 100vh;
   margin: 0;
+  background:rgb(230, 228, 228);
+
 }
 ul {
 	list-style-type: none;
@@ -73,4 +75,31 @@ img {
 	margin-top: 30px;
 	margin-bottom: 30px;
 	margin-right:10px;
+}
+#content{
+    position:absolute;
+    z-index:1;
+	margin:0;
+	padding:0;
+}
+
+#background{
+    position:absolute;
+    z-index:0;
+    background:rgb(230, 228, 228);
+    display:block;
+    color:yellow;
+	margin: 0;
+	margin-left: 500px;
+	padding-top: 300px;
+}
+#bg-text
+{
+    color:rgb(53, 52, 52);
+    font-size: 300px;
+	margin: 0;
+	opacity: 10%;
+	font-weight: 900;
+    /*transform:rotate(300deg);
+    -webkit-transform:rotate(300deg);*/
 }
