@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+    {% load static %}
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Doctor Signup</title>
-    <link rel="stylesheet" href="doc_register.css">
+    <link rel="stylesheet" href="{% static 'css/doc_register.css' %}">
 </head>
 
 <body>
     <h1>Doctor's Details</h1>
-    <form method="POST" action="/doctor_signup">
+    <form method="POST" action="/doc_signup">
+        {% csrf_token %}
         <div class="col col1">
             <div class="minput">
                 <input type="text" name="fname" dir="auto" required>
@@ -71,8 +73,7 @@
             </div>
         </br>
             <div class="minput">
-            
-                
+
                 <input type="submit" name="send" value="Submit" style="padding:7px;">
             </div>
         </div>

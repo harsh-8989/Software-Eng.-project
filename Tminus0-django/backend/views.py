@@ -164,7 +164,7 @@ def doctor_login(request):
         user=request.POST['username']
         psw=request.POST['password']
         auth=doctor.objects.get(user_name=user)        
-        print(auth)
+        # print(auth)
         if auth is not None and check_password(psw,auth.password):
             return render(request,'doc_page.html')
         else :
@@ -188,4 +188,4 @@ def doctor_signup(request):
     else:
         return HttpResponse("404 - not found")
 def doctor_signup_page(request):
-    return render(request,'doc_signup.html')
+    return render(request,'doc_register.html')
