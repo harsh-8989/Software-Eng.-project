@@ -1,0 +1,51 @@
+body {font-family: 'Montserrat'; margin: 0; background-color: rgb(238, 238, 238); height: 100%;}
+
+.main{
+    height: 100%;
+    margin: auto 100px;
+}
+
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 0.7px solid rgb(201, 198, 198);
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+
+input[type=submit] {
+  background-color: #94479e;
+  color: white;
+  padding: 12px 80px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+input[type=submit]:hover {
+  background-color: #008080;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #ffffff;
+  padding: 30px;
+  margin: 0;
+}
+
+
+
+h3{
+    font-size: 60px;
+    letter-spacing: 5px;
+    text-align: center;
+    color: black;
+    word-spacing: 10px;
+}
