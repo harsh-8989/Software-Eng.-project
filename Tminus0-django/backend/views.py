@@ -1,6 +1,7 @@
 from django.shortcuts import render,HttpResponse
 from backend.models import developer
 from backend.models import doctor
+from backend.models import feedback
 from django.contrib import messages as message
 from datetime import datetime
 from django.contrib.messages import constants
@@ -189,3 +190,14 @@ def doctor_signup(request):
         return HttpResponse("404 - not found")
 def doctor_signup_page(request):
     return render(request,'doc_register.html')
+def contact_dev(request):
+    if request.method =='POST':
+        first_name=request.POST['firstname']
+        last_name=request.POST['lastname']
+        msg=request.POST['subject']
+        user=feedback(fname=first_name,lname=last_name,feedback=msg)
+        user.save()
+        message.add_message(request, messages.INFO, 'Success!!')
+        return render(request,'contact_dev.html')
+    else:
+        return render(request,'contact_dev.html')

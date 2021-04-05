@@ -15,3 +15,9 @@ class doctor(models.Model):
     experience=models.IntegerField()
     def __str__(self):
         return self.user_name
+class feedback(models.Model):
+    fname=models.CharField(max_length=132)
+    lname=models.CharField(max_length=132)
+    feedback=models.TextField()
+    def __str__(self):
+        return self.fname

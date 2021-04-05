@@ -1,19 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+  {% load static %}
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
-    <link rel="stylesheet" href="contact_dev.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="{% static '/css/contact_dev.css' %}">
+    <title>Contact_developer</title>
 </head>
 <body>
+  {% if messages %}
+    <nav id="msg" style="background-color: lightgreen;width: 100%;margin:0px;padding:2px; padding-left: 50px;align-content: center;">
+        {% for message in messages %}
+            {{ message }}
+        {% endfor %}
+        <span class="close">
+          .
+        </span>
+      </nav>
+    {% endif %}
     <div class="main">
     <h3>Contact Developer</h3>
 
+    
 <div class="container">
-  <form action="/action_page.php">
+  <form method="POST" action="/contact_developer">
+    {% csrf_token %}
     <label for="fname" style="letter-spacing: 1px;">First Name</label>
     <input type="text" id="fname" name="firstname" placeholder="Your name..">
 
@@ -29,5 +42,7 @@
   </form>
 </div>
 </div>
+{% load static %}  
+  <script src="{% static '/js/login.js' %}" type="text/javascript"></script>  
 </body>
 </html>
