@@ -46,8 +46,8 @@ class _TestpageState extends State<Testpage> {
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,
                   colors: <Color>[
-                    Color(0xFF6E14FF),
-                    Color(0xFF5F5F5F)
+                    Color(0xFF6E15FF),
+                    Color(0xFF720094)
                   ])
           ),
         ),
@@ -58,62 +58,84 @@ class _TestpageState extends State<Testpage> {
             padding: EdgeInsets.all(50.0),
             margin: EdgeInsets.all(50.0),
             width: 1000,
-            decoration: BoxDecoration(
+            decoration: BoxDecoration
+              (
                 color: Colors.white24,
                 borderRadius: BorderRadius.circular(20.0),
             ),
-            child: Expanded(
 
-              child: Center(
                 child: Column(
-
+                mainAxisAlignment: MainAxisAlignment.spaceBetween ,
                   children: [
-
-
-
-                    RaisedButton(
-
-                      child: Text(
-                          'Refresh'
+                    Expanded(
+                      child: Container(
+                        height: 500,
                       ),
-
-                      onPressed: (){
-                        check();
-                      },
+                    ),
+                    Container(
+                      child: Expanded(
+                        // child:ClipOval(
+                        //   child: Image.network(
+                        //     'https://via.placeholder.com/150',
+                        //     width: 100,
+                        //     height: 100,
+                        //     fit: BoxFit.cover,
+                        //   ),
+                        // ),
+                        child: CircleAvatar(radius: (125),
+                            backgroundColor: Colors.white,
+                            child: ClipRRect(
+                              borderRadius:BorderRadius.circular(50),
+                              child: Image.asset("images/wait.jpg"),
+                            )
+                        )
+                      ),
                     ),
                     SizedBox(
                       height: 25,
                     ),
-                    Expanded(
+                    Container(
+                      child: RaisedButton(
 
-                      child: Text(
-                        'IF YOU ARE UNABLE TO LOGIN KINDLY CONTACT DEVELOPER',
-                        style: TextStyle(
-                          fontSize: 25,
-                          fontWeight:FontWeight.w900,
-                          backgroundColor: Colors.black,
-                          color: Colors.white,
+                        child: Expanded(
+                          child: Text(
+                              'Refresh'
+                          ),
                         ),
+
+                        onPressed: (){
+                          check();
+                        },
                       ),
                     ),
-
                     Expanded(
-                      child: Text(
-                        'DEVELOPER CONTACT: Tminus0@gmail.com',
-                        style: TextStyle(
-                          fontSize: 25,
-                          fontWeight:FontWeight.w900,
-                          backgroundColor: Colors.black,
-                          color: Colors.white,
-                        ),
+                      child: Container(
+                        height: 500,
                       ),
                     ),
+                    Expanded(
+                        child: Container(
+                          child:Text(
+                            'CONTACT DEVELOPER IF UNABLE TO LOGIN:TMINUS0@GMAIL.COM',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 25,
+                                fontStyle: FontStyle.italic,
+                                decoration: TextDecoration.underline),
+                          ),
+
+
+                    )
+                    ),
+
+
+
                   ],
                 ),
               )
+
     ),
-    ),
-        ),
+
     ],
     ),
     );
