@@ -9,21 +9,14 @@
     <link rel="stylesheet" href="{% static '/css/input_stream.css' %}">
 </head>
 <body>
-    <div class="zone">
-
-        <div id="dropZ">
-          <i class="fa fa-cloud-upload"></i>
-          <div>input file path</div>                    
-          <div class="selectFile">       
-            <form action="/predict" method="POST" accept="csv">
-                {% csrf_token %}     
-                <input type="file" name="database">
-                <input type="submit" >
-            </form>
-          </div>
+  <div class="container">
+    <form action="/predict" method="POST" accept="csv">
+      <h2>input file path</h2>                    
+        {% csrf_token %}     
+          <input type="file" name="database" class="custom-file-input">
           <p>File size limit : 10 MB</p>
-        </div>
-      
-      </div>
+          <input type="submit" >
+      </form>
+    </div>
 </body>
 </html>
