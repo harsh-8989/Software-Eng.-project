@@ -55,7 +55,7 @@ class _LoginPageState extends State<LoginPage> {
                     margin: EdgeInsets.all(50.0),
                     // color: Colors.white,
                     decoration: BoxDecoration(
-                        color: Colors.white,
+                        color: Colors.purple.shade50,
                         borderRadius: BorderRadius.circular(20.0)),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -99,10 +99,11 @@ class _LoginPageState extends State<LoginPage> {
                           height:25,
                         ),
                         TextField(
+                          obscureText: true,
                           decoration: InputDecoration(
                             labelText: 'Password',
                             prefixIcon: const Icon(Icons.security),
-                            
+
                           ),
                           onChanged: (String value){
                             password=value;
@@ -192,7 +193,7 @@ class _LoginPageState extends State<LoginPage> {
                     margin: EdgeInsets.all(50.0),
                     // color: Colors.white,
                     decoration: BoxDecoration(
-                        color: Colors.white,
+                        color: Colors.purple.shade50,
                         borderRadius: BorderRadius.circular(20.0)),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -238,6 +239,7 @@ class _LoginPageState extends State<LoginPage> {
                           height:25,
                         ),
                         TextField(
+                          obscureText: true,
                           decoration: InputDecoration(
                             labelText: 'Password',
                             prefixIcon: const Icon(Icons.security),
