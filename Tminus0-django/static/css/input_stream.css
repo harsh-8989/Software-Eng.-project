@@ -1,0 +1,72 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+body,html{
+    font-family: 'Montserrat';
+    font-size: 22px;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: #4C5270;
+}
+
+.container{
+    margin: 50px 200px;
+    height: 50vh;
+    justify-items: center;
+    text-align: center;
+    background-color: #3b4058;
+    border-radius: 16px;
+    padding: 50px;
+    color: #d8ebe4;
+}
+
+input[type="submit"]{
+    background-color: #F652A0; 
+    margin-top: 20px;
+    border-radius: 25px; 
+    padding: 12px 50px; 
+    color: #353a4e;
+    letter-spacing: 2px;
+    font-size: 22px;
+    cursor: pointer;
+    font-family: 'Montserrat';
+    font-weight: bold;
+}
+ 
+/*input[type="file"]{
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    padding: 10px;
+}*/
+
+.custom-file-input::-webkit-file-upload-button {
+    visibility: hidden;
+  }
+  .custom-file-input::before {
+    content: 'Choose Files';
+    display: grid;
+    border-radius: 12px;
+    padding: 5px 8px;
+    cursor: pointer;
+    background-color: #F652A0;
+    color: black;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+    letter-spacing: 1.7px;
+
+  }
+  .custom-file-input:hover::before {
+    border-color: black;
+  }
+  .custom-file-input:active::before {
+    background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+  }
+
+h2{
+    font-size: 40px;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    word-spacing: 8px;
+    margin-bottom: 1em;
+}
