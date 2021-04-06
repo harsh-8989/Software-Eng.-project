@@ -46,8 +46,8 @@ class _TestpageState extends State<Testpage> {
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,
                   colors: <Color>[
-                    Color(0xFF6E14FF),
-                    Color(0xFF5F5F5F)
+                    Color(0xFF6E15FF),
+                    Color(0xFF720094)
                   ])
           ),
         ),
@@ -65,9 +65,13 @@ class _TestpageState extends State<Testpage> {
             ),
 
                 child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly ,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween ,
                   children: [
-
+                    Expanded(
+                      child: Container(
+                        height: 500,
+                      ),
+                    ),
                     Container(
                       child: Expanded(
                         // child:ClipOval(
@@ -78,7 +82,7 @@ class _TestpageState extends State<Testpage> {
                         //     fit: BoxFit.cover,
                         //   ),
                         // ),
-                        child: CircleAvatar(radius: (75),
+                        child: CircleAvatar(radius: (125),
                             backgroundColor: Colors.white,
                             child: ClipRRect(
                               borderRadius:BorderRadius.circular(50),
@@ -87,7 +91,9 @@ class _TestpageState extends State<Testpage> {
                         )
                       ),
                     ),
-
+                    SizedBox(
+                      height: 25,
+                    ),
                     Container(
                       child: RaisedButton(
 
