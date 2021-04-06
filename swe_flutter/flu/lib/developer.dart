@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Devop extends StatefulWidget {
@@ -69,46 +70,145 @@ class _DevopState extends State<Devop> {
                           Container(
 
                             child: Container(
-                              padding: EdgeInsets.all(8),
-                              margin: EdgeInsets.all(8),
+                              padding: EdgeInsets.all(10),
+                              margin: EdgeInsets.all(25),
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(20),
-                                color: Colors.white30,
+                                color: Colors.purple.shade50,
                               ),
 
                               child: Column(
+
                                 children: [
 
-                                  Text(
-                                    document["name"],
-                                    style: TextStyle(
-                                      color: Colors.black,
-                                      fontWeight: FontWeight.w900,
-                                      fontSize: 25.0,
 
-                                    ),
+                                  Row(
+
+                                    children: [
+                                      Text(
+                                          'NAME:'
+                                      ),
+                                      SizedBox(
+                                        width: 3,
+                                      ),
+                                      Text(
+                                        document["name"],
+                                        style: TextStyle(
+                                          color: Colors.pink[900],
+                                          fontWeight: FontWeight.w900,
+                                          fontSize: 25.0,
+
+                                        ),
+                                      ),
+                                    ],
                                   ),
-                                  Text(
-                                    document["email"],
-                                    style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 25.0,
-
-                                    ),
-                                  ),Text(
-                                    document["phonenumber"],
-                                    style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 25.0,
-
-                                    ),
+                                  SizedBox(
+                                    height: 10,
                                   ),
 
-                                  RaisedButton(
-                                    child: Text(document["isdoct"].toString()),
-                                    onPressed: (){
-                                      changestatus(document["id"],document["isdoct"]);
-                                    },
+                                  Row(
+
+                                    children: [
+                                      Text(
+                                          'EMAIL:'
+                                      ),
+                                      SizedBox(
+                                        width: 3,
+                                      ),
+                                      Text(
+                                        document["email"],
+                                        style: TextStyle(
+                                          color: Colors.pink[900],
+                                          fontWeight: FontWeight.w900,
+                                          fontSize: 25.0,
+
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  SizedBox(
+                                    height: 10,
+                                  ),
+                                  Row(
+
+                                    children: [
+                                      Text(
+                                          'PHONE_NUMBER:'
+                                      ),
+                                      SizedBox(
+                                        width: 3,
+                                      ),
+                                      Text(
+                                        document["phonenumber"],
+                                        style: TextStyle(
+                                          color: Colors.pink[900],
+                                          fontWeight: FontWeight.w900,
+                                          fontSize: 25.0,
+
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  SizedBox(
+                                    height: 10,
+                                  ),
+                                  Row(
+
+                                    children: [
+                                      Text(
+                                          'YOE:'
+                                      ),
+                                      SizedBox(
+                                        width: 3,
+                                      ),
+                                      Text(
+                                        document["yoe"],
+                                        style: TextStyle(
+                                          color: Colors.pink[900],
+                                          fontWeight: FontWeight.w900,
+                                          fontSize: 25.0,
+
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  SizedBox(
+                                    height: 10,
+                                  ),
+                                  Row(
+
+                                    children: [
+                                      Text(
+                                          'SPECIFICATION:'
+                                      ),
+                                      SizedBox(
+                                        width: 3,
+                                      ),
+                                      Text(
+                                        document["position"],
+                                        style: TextStyle(
+                                          color: Colors.pink[900],
+                                          fontWeight: FontWeight.w900,
+                                          fontSize: 25.0,
+
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  SizedBox(
+                                    height: 10,
+                                  ),
+                                  ButtonTheme(
+                                    minWidth: 200.0,
+                                    height: 50.0,
+                                    child: RaisedButton(
+                                      
+                                      color: Colors.purple.shade200,
+                                      child: Text(document["isdoct"].toString()),
+                                      onPressed: (){
+                                        changestatus(document["id"],document["isdoct"]);
+                                      },
+                                    ),
                                   ),
                                   SizedBox(
                                     height:25,
