@@ -10,6 +10,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth.hashers import make_password,check_password
 from django.contrib.messages import constants as messages
 # Create your views here.
+from django.core.files import File
 from django.shortcuts import render
 import pandas as pd
 import numpy as np
@@ -59,10 +60,16 @@ from django.core.files import File
 # Create your views here.
 def index(request):
     return render(request,'index.html')
+def updateinput(request):
+    return render(request,'input_stream.html')
+
+data=pd.read_csv('database.csv')
 def predict(request):
-    # file=request.POST['database']
-    # print(file[:5])
-    data=pd.read_csv('database.csv')
+    if request.method=='POST':
+        print("YES\n")
+        data=pd.read_csv(request.POST['database'])
+    else :
+        data=pd.read_csv('database.csv')
     data.sample(frac = 1)
     y = data['y']
     XNorm = data.drop('y',axis=1)
@@ -201,3 +208,6 @@ def contact_dev(request):
         return render(request,'contact_dev.html')
     else:
         return render(request,'contact_dev.html')
+
+def input_stream(request):
+    return render(request,'input_stream.html')
