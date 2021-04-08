@@ -13,6 +13,6 @@ urlpatterns = [
     path("doc_signup",views.doctor_signup,name="doctor_signup"),
     path("predict",views.predict,name="graph"),
     path("contact_developer",views.contact_dev,name="contact developer"),
-    path("input stream",views.predict,name="update input stream"),
+    path("input_stream",views.predict,name="update input_stream"),
     path("updateinput",views.updateinput)
 ]
