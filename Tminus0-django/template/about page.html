@@ -7,6 +7,7 @@
 body {font-family: 'Montserrat';font-size: 16px; margin: 0; }
 body,html {
   height: 100vh;
+  width: 100vw;
   margin: 0;
   background:rgb(230, 228, 228);
 
@@ -22,16 +23,15 @@ body,html {
 #background{
     position:absolute;
     z-index:0;
-    background:rgb(230, 228, 228);
+    background:rgb(230, 228, 228,0);
     display:block;
-    color:yellow;
 	margin: 0;
 	margin-left: 500px;
 	padding-top: 300px;
 }
-#bg-text
+.bg-text
 {
-    color:rgb(53, 52, 52);
+    color:rgb(0, 0, 0);
     font-size: 300px;
 	margin: 0;
 	opacity: 10%;
@@ -96,6 +96,9 @@ img {
 }
 
 ul {
+	display: flex;
+	width: 96.05%;
+	justify-content: space-between;
 	list-style-type: none;
 	margin: 0;
 	padding: 0 30px;
@@ -105,6 +108,8 @@ ul {
   
 li {
 	float: left;
+	list-style-type: none;
+	margin: 0;
 } 
 li a {
 	display: inline-block;
@@ -118,16 +123,25 @@ li a:hover {
 	background-color: #51015c;
 }
 
+.darkmode--activated p{
+  color: rgb(255, 255, 255);
+}
+
+.darkmode--activated .bg-text{
+  color: rgb(214, 210, 210);
+}
+
+
 </style>
 </head>
 <body>
-	<ul>
-		<li><img src="{% static 'logo(t-0).png' %}" alt="logo" width="65.43px" height="35" /></li>
+	<ul class="darkmode-ignore">
+		<li><img src="{% static 'logo(t-0).png' %}" alt="logo" width="65.43px" height="30" style="padding-top: 6px;"/></li>
 		<li style="float:right"><a href="/home">HOME</a></li>
 		<li style="float:right"><a href="/about">ABOUT</a></li>
 	</ul>
 	<div id="background">
-		<p id="bg-text">About</p>
+		<p class="bg-text">About</p>
 		  </div>
 		  <div id="container"><h1>About</h1>
 <h4>T Minus 0</h4>
@@ -139,8 +153,28 @@ li a:hover {
 <div class="right">
 <p>With the increasing popularity of the Internet-of-Medical-Things (IoMT) and smart devices, huge volumes of real time or IoT data have been generated. This software aims to address the concept drift(change in data), which is a major challenge in the processing of voluminous data streams. Concept drift refers to overtime change in data distribution. It may occur in the medical domain, for example the medical sensors measuring for general healthcare or rehabilitation, which may switch their roles for ICU emergency operations when required. Detecting drifts among the real time medical data becomes trickier when the class distributions in data are skewed, which is often true for medical sensors e-health data. 
 </p>
+
 </div>
 </div>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+<script>
+  const options = {
+  bottom: '64px', // default: '32px'
+  right: 'unset', // default: '32px'
+  left: '32px', // default: 'unset'
+  time: '0.5s', // default: '0.3s'
+  mixColor: '#fff', // default: '#fff'
+  backgroundColor: '#fff',  // default: '#fff'
+  buttonColorDark: '#100f2c',  // default: '#100f2c'
+  buttonColorLight: '#fff', // default: '#fff'
+  saveInCookies: false, // default: true,
+  label: '🌓', // default: ''
+  autoMatchOsTheme: true // default: true
+}
+
+	const darkmode = new Darkmode(options);
+	darkmode.showWidget();
+</script>
 </body>
 </html>
