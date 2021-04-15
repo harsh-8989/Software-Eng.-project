@@ -59,7 +59,7 @@ input[type=text], input[type=password] {
   border-radius: 25px;
   box-sizing: border-box;
   background-color: #CCCCCC;
-  color: #999999;
+  color: #575555;
   font-size: 14px;
   letter-spacing: 0.75px;
 }
@@ -114,7 +114,7 @@ span.psw {
 /* Change styles for span and cancel button on extra small screens */
 @media screen and (max-width: 300px) {
   span.psw {
-     display: block;
+     display: flex;
      float: none;
   }
   .cancelbtn {

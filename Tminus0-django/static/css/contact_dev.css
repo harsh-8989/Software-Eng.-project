@@ -1,4 +1,4 @@
-body {font-family: 'Montserrat'; margin: 0; background-color: rgb(238, 238, 238); height: 100%;}
+body {font-family: 'Montserrat'; margin: 0;height: 100%;}
 
 .main{
     height: 100%;
@@ -35,12 +35,10 @@ input[type=submit]:hover {
 
 .container {
   border-radius: 5px;
-  background-color: #ffffff;
+  background-color: #e6e6e6;
   padding: 30px;
   margin: 0 50px;
 }
-
-
 
 
 h3{

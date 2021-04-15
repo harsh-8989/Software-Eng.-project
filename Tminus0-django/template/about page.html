@@ -141,7 +141,7 @@ li a:hover {
 		<li style="float:right"><a href="/about">ABOUT</a></li>
 	</ul>
 	<div id="background">
-		<p class="bg-text">About</p>
+		<h5 class="bg-text">About</h5>
 		  </div>
 		  <div id="container"><h1>About</h1>
 <h4>T Minus 0</h4>
@@ -176,5 +176,12 @@ li a:hover {
 	const darkmode = new Darkmode(options);
 	darkmode.showWidget();
 </script>
+
+<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+  <script>
+
+    gsap.from('p', {opacity: 0, duration: 1.5, y: -100, ease: Power4.easeOut})
+
+  </script>
 </body>
 </html>
