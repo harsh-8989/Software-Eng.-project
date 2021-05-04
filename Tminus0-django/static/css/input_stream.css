@@ -1,10 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 
-body,html{
+body{
     font-family: 'Montserrat';
     font-size: 22px;
-    height: 100vh;
-    margin: 0;
+    min-height: 100vh;
+    margin-top: 0;
     padding: 0;
     background-color: #4C5270;
 }
